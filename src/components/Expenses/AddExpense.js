@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AddExpense(){
+const AddExpense = () => {
    return <button>Add New Expense</button>
 }
 
