@@ -8,9 +8,29 @@ const Expenses = ({ items }) => {
   const [selectedYear, setSelectedYear] = useState("2020");
   const selectYearHandler = (selectYear) => {
     setSelectedYear(selectYear);
+   
     console.log("z exp js");
     console.log(selectYear);
   };
+
+  const filteredExpenses =  items.filter(item => {
+    return item.date.getFullYear().toString() === selectedYear
+  })
+
+  let expensesContent = <p>No Expenses to be shown</p>;
+
+  if (filteredExpenses.length > 0) {
+    expensesContent = filteredExpenses.map((item) => {
+      return (
+        <ExpenseItem
+          key={item.id}
+          initTitle={item.title}
+          amount={item.amount}
+          date={item.date}
+        />
+      );
+    })
+  }
 
   return (
     <div>
@@ -19,15 +39,7 @@ const Expenses = ({ items }) => {
           selected={selectedYear}
           onSelectedYear={selectYearHandler}
         />
-        {items.map(item => {
-          return (
-            <ExpenseItem
-              initTitle={item.title}
-              amount={item.amount}
-              date={item.date}
-            />
-          );
-        })}
+        {expensesContent}
       </Card>
     </div>
   );
