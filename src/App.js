@@ -23,10 +23,16 @@ const App = () => {
       date: new Date(2021, 7, 22),
     },
   ];
+
+  const addExpenseHandler = expense => {
+    console.log('ina appjs')
+    console.log(expense)
+  }
+
   return (
     <div className="App">
       <h1>
-        <NewExpense />
+        <NewExpense onAddExpense={addExpenseHandler}/>
         <Expenses items={expenses} />
       </h1>
     </div>
