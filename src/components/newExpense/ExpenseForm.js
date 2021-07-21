@@ -1,10 +1,11 @@
 import { useState } from "react";
 import "./ExpenseForm.css";
 
-const ExpenseForm = ({ onSaveExpenseData }) => {
+const ExpenseForm = ({ onSaveExpenseData, stopEdit }) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
+  // const [addClicked, setAddClicked] = useState(false);
   const titleChangeHandler = (e) => {
     setEnteredTitle(e.target.value);
   };
@@ -23,11 +24,23 @@ const ExpenseForm = ({ onSaveExpenseData }) => {
       date: new Date(enteredDate),
     };
     // console.log(expenseData);
+    // setAddClicked((prevAdd) => (prevAdd = !prevAdd));
     onSaveExpenseData(expenseData);
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");
+    // console.log(addClicked);
   };
+
+  // if (addClicked === true) {
+  //   return (
+  //     <div className="new-expense__actions">
+  //       <button className="new-expense button" type="submit">
+  //         Add New Expense
+  //       </button>
+  //     </div>
+  //   );
+  // }
 
   return (
     <form onSubmit={submitHandler}>
@@ -62,6 +75,9 @@ const ExpenseForm = ({ onSaveExpenseData }) => {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button onClick={stopEdit} className="new-expense button" type="button">
+          Cancel
+        </button>
         <button className="new-expense button" type="submit">
           Add Expense
         </button>
