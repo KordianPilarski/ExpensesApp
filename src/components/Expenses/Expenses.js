@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ExpensesFilter from "./ExpenseFilter";
-import ExpensesList from "./ExpensesList"
+import ExpensesList from "./ExpensesList";
+import ExpensesChart from "./ExpensesChart";
 import Card from "../UI/Card";
 import "./Expenses.css";
 
@@ -8,16 +9,14 @@ const Expenses = ({ items }) => {
   const [selectedYear, setSelectedYear] = useState("2020");
   const selectYearHandler = (selectYear) => {
     setSelectedYear(selectYear);
-   
+
     console.log("z exp js");
     console.log(selectYear);
   };
 
-  const filteredExpenses =  items.filter(item => {
-    return item.date.getFullYear().toString() === selectedYear
-  })
-
-  
+  const filteredExpenses = items.filter((item) => {
+    return item.date.getFullYear().toString() === selectedYear;
+  });
 
   return (
     <div>
@@ -26,7 +25,8 @@ const Expenses = ({ items }) => {
           selected={selectedYear}
           onSelectedYear={selectYearHandler}
         />
-        <ExpensesList items={filteredExpenses}/>
+        <ExpensesChart expenses={filteredExpenses} />
+        <ExpensesList items={filteredExpenses} />
       </Card>
     </div>
   );

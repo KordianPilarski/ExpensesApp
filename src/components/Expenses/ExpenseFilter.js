@@ -1,8 +1,9 @@
 // import React, { useState } from "react";
 
+import Chart from "../Chart/Chart";
 import "./ExpensesFilter.css";
 
-const ExpensesFilter = ({onSelectedYear, selected}) => {
+const ExpensesFilter = ({ onSelectedYear, selected }) => {
   const selectChangeHandler = (e) => {
     onSelectedYear(e.target.value);
     // console.log(e.target.value);
