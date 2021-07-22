@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ExpensesApp/static/css/main.5caf2304.chunk.css",
+    "main.js": "/ExpensesApp/static/js/main.7ca13600.chunk.js",
+    "main.js.map": "/ExpensesApp/static/js/main.7ca13600.chunk.js.map",
+    "runtime-main.js": "/ExpensesApp/static/js/runtime-main.95ca57ae.js",
+    "runtime-main.js.map": "/ExpensesApp/static/js/runtime-main.95ca57ae.js.map",
+    "static/js/2.29bb0013.chunk.js": "/ExpensesApp/static/js/2.29bb0013.chunk.js",
+    "static/js/2.29bb0013.chunk.js.map": "/ExpensesApp/static/js/2.29bb0013.chunk.js.map",
+    "static/js/3.402703bf.chunk.js": "/ExpensesApp/static/js/3.402703bf.chunk.js",
+    "static/js/3.402703bf.chunk.js.map": "/ExpensesApp/static/js/3.402703bf.chunk.js.map",
+    "index.html": "/ExpensesApp/index.html",
+    "static/css/main.5caf2304.chunk.css.map": "/ExpensesApp/static/css/main.5caf2304.chunk.css.map",
+    "static/js/2.29bb0013.chunk.js.LICENSE.txt": "/ExpensesApp/static/js/2.29bb0013.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.95ca57ae.js",
+    "static/js/2.29bb0013.chunk.js",
+    "static/css/main.5caf2304.chunk.css",
+    "static/js/main.7ca13600.chunk.js"
+  ]
+}
